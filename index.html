@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+    </style>
+</head>
+<body>
+    <script src="main.js"></script>
+
+    <div id="login-box">
+        <h1>Iniciar Sesión</h1>
+        <div class="form-cont">
+            <label for="is-usuario">Usuario: </label><input type="text" id="is-usuario"> <br><br>
+            <label for="is-contra">Contraseña: </label><input type="password" id="is-contra"> <br><br>
+            <button onclick="iniciarSesion()">Iniciar sesión</button>
+            <button onclick="mostrarR()">Ir a registrarse</button>
+        </div>
+    </div>
+    <div id="register-box" hidden>
+        <h1>Registrarse</h1>
+        <div class="form-cont">
+            <label for="r-usuario">Usuario: </label><input type="text" id="r-usuario"> <br><br>
+            <label for="r-contra">Contraseña: </label><input type="password" id="r-contra"> <br><br>
+            <button onclick="registrarUsuario()">Registrarse</button>
+            <button onclick="mostrarIS()">Ir a iniciar sesión</button>
+        </div>
+    </div>
+    <div id="main-box" hidden>
+        <h1>Página principal</h1>
+        <div id="categorias-box">
+            <h2>Categorias</h2>
+            <div id="addCategoria-box">
+                <label for="nombreCategoria">Nombre: </label><input type="text" id="nombreCategoria">
+                <button onclick="addCategoria()">Añadir categoria</button>
+            </div>
+            <div id="listarCategorias-box">
+
+            </div>
+        </div><br><br>
+        <button onclick="cerrarSesion()">Cerrar sesión</button>
+    </div>
+
+</body>
+</html>

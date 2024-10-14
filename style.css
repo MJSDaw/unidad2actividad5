@@ -1,0 +1,11 @@
+* {
+    font-family: 'Nunito', sans-serif;
+}
+body {
+    background-color: azure;
+    display: flex;
+    width: 98vw;
+    height: 98vh;
+    align-items: center;
+    justify-content: center;
+}
