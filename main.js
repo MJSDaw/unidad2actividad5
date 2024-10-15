@@ -1,6 +1,6 @@
 // alert("OK");
 
-const usuarios = [];
+const usuarios = [new Usuario("", "")];
 let usuarioActivo = null;
 
 function Usuario(username, password){
@@ -84,11 +84,15 @@ function actualizarListaCategorias(){
     let lista = document.getElementById('listarCategorias-box');
     lista.innerHTML = '';
     for(const categoria of usuarioActivo.categorias) {
-        lista.innerHTML += categoria + `<button onclick='quitarCategoria("${categoria}")'>X</button> <br>`;
+        lista.innerHTML += categoria + `<button class="btn_quitarCat" onclick='quitarCategoria("${categoria}")'>X</button> <br>`;
     }
 }
 
 function cerrarSesion(){
     mostrarIS();
     usuarioActivo = null;
+}
+
+function optionCategorias(){
+    return
 }

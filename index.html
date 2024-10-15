@@ -12,7 +12,7 @@
 <body>
     <script src="main.js"></script>
 
-    <div id="login-box">
+    <div id="login-box" hidden>
         <h1>Iniciar Sesión</h1>
         <div class="form-cont">
             <label for="is-usuario">Usuario: </label><input type="text" id="is-usuario"> <br><br>
@@ -30,8 +30,8 @@
             <button onclick="mostrarIS()">Ir a iniciar sesión</button>
         </div>
     </div>
-    <div id="main-box" hidden>
-        <h1>Página principal</h1>
+    <h1>Página principal</h1>
+    <div id="main-box">
         <div id="categorias-box">
             <h2>Categorias</h2>
             <div id="addCategoria-box">
@@ -42,8 +42,16 @@
 
             </div>
         </div><br><br>
-        <button onclick="cerrarSesion()">Cerrar sesión</button>
+        <div id="gastos-box">
+            <h2>Gastos</h2>
+            <div id="addGasto-box">
+                <label for="cantidad">Cantidad: </label> </label><input type="number" id="cantidad">
+                <button onclick="addCantidad()">Añadir categoria</button>
+            </div>
+            <div id="listarGastos-box"></div>
+        </div>
     </div>
+    <button onclick="cerrarSesion()">Cerrar sesión</button>
 
 </body>
 </html>

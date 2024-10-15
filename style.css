@@ -4,8 +4,24 @@
 body {
     background-color: azure;
     display: flex;
+    flex-direction: column;
     width: 98vw;
     height: 98vh;
     align-items: center;
     justify-content: center;
+}
+button {
+    border: none;
+    background-color:rgb(216, 247, 216);
+    border-radius: 0.1rem;
+}
+.btn_quitarCat {
+    margin-left: 0.5rem;
+}
+#main-box {
+    display: flex;
+    flex-direction: row;
+}
+#categorias-box, #gastos-box {
+    padding: 0 5rem 5rem 0;
 }
