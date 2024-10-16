@@ -12,7 +12,7 @@
 <body>
     <script src="main.js"></script>
 
-    <div id="login-box" hidden>
+    <div id="login-box">
         <h1>Iniciar Sesión</h1>
         <div class="form-cont">
             <label for="is-usuario">Usuario: </label><input type="text" id="is-usuario"> <br><br>
@@ -30,28 +30,37 @@
             <button onclick="mostrarIS()">Ir a iniciar sesión</button>
         </div>
     </div>
-    <h1>Página principal</h1>
-    <div id="main-box">
-        <div id="categorias-box">
-            <h2>Categorias</h2>
-            <div id="addCategoria-box">
-                <label for="nombreCategoria">Nombre: </label><input type="text" id="nombreCategoria">
-                <button onclick="addCategoria()">Añadir categoria</button>
+    <div id="main" hidden>
+        <h1>Página principal</h1>
+        <div id="main-box">
+            <div id="categorias-box">
+                <h2>Categorias</h2>
+                <div id="addCategoria-box">
+                    <label for="nombreCategoria">Nombre: </label><input type="text" id="nombreCategoria">
+                    <button onclick="addCategoria()">Añadir categoria</button>
+                </div>
+                <div id="listarCategorias-box">
+                </div>
+            </div><br><br>
+            <div id="gastos-box">
+                <h2>Gastos</h2>
+                <div>
+                    <label for="filtroCategoria">Filtrar por categoría: </label>
+                    <select id="filtroCategoria" onchange="filtrarGastos()">
+                        <option value="">Todas las categorías</option>
+                    </select>
+                </div>
+                <div id="addGasto-box"></div>
+                <div id="listarGastos-box"></div>
+            </div>            
+            
+            <div id="pres-box">
+                <h2>Presupuestos</h2>
+                <div id="addPres-box"></div>
+                <div id="listarPres-box"></div>
             </div>
-            <div id="listarCategorias-box">
-
-            </div>
-        </div><br><br>
-        <div id="gastos-box">
-            <h2>Gastos</h2>
-            <div id="addGasto-box">
-                <label for="cantidad">Cantidad: </label> </label><input type="number" id="cantidad">
-                <button onclick="addCantidad()">Añadir categoria</button>
-            </div>
-            <div id="listarGastos-box"></div>
         </div>
+        <button onclick="cerrarSesion()">Cerrar sesión</button>
     </div>
-    <button onclick="cerrarSesion()">Cerrar sesión</button>
-
 </body>
 </html>
